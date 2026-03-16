@@ -1,0 +1,29 @@
+{
+  "name": "pedometer",
+  "version": "4.2.0",
+  "summary": "Pedometer and Step Detection for Android and iOS",
+  "description": "Pedometer and Step Detection for Android and iOS",
+  "homepage": "https://github.com/carp-dk/flutter-plugins/tree/master/packages/pedometer",
+  "license": {
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "CARP Team": "support@carp.dk"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "pedometer/Sources/pedometer/**/*",
+  "dependencies": {
+    "Flutter": []
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES",
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "i386"
+  },
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
+}
