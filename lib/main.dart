@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:lucky_star_pedometer/pages/computed/computed_binding.dart';
+import 'package:lucky_star_pedometer/pages/computed/computed_view.dart';
+import 'package:lucky_star_pedometer/pages/guide/guide_line.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'db_pedometer/data.dart';
 import 'lang/lang.dart';
@@ -65,7 +68,7 @@ class MyApp extends StatelessWidget {
           darkTheme: AppTheme.darkTheme(),
           themeMode: mode,
           debugShowCheckedModeBanner: false,
-          initialRoute: firstLaunch ? '/meter_guide' : '/meter_main_frame',
+          initialRoute: '/',
           getPages: LuckyStar,
           ),
         );
@@ -75,9 +78,18 @@ class MyApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> LuckyStar = [
   GetPage(
+    name: '/',
+    page: () => const ComputedView(),
+    binding: ComputedBinding(),
+  ),
+  GetPage(
     name: '/meter_guide',
     page: () => const GuideView(),
     binding: GuideBinding(),
+  ),
+  GetPage(
+    name: '/meter_guide_line',
+    page: () => const GuideLine(),
   ),
   GetPage(
     name: '/meter_main_frame',

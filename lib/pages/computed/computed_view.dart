@@ -11,8 +11,8 @@ class ComputedView extends GetView<ComputedLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.hrpotg.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.pilwcj.value
+              ? const CircularProgressIndicator(color: Colors.deepPurpleAccent)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class ComputedView extends GetView<ComputedLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.yrodhq();
+              controller.xkhcjp();
             },
             icon: const Icon(
               Icons.restart_alt,

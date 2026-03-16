@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import '../computed/computed_logic.dart';
 
 class GuideLine extends GetView<ComputedLogic> {
+  const GuideLine({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class GuideLine extends GetView<ComputedLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.cxhbijs.value)),
+              url: WebUri.uri(Uri.parse(controller.zcoby.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

@@ -176,16 +176,31 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/OrderedSet/OrderedSet.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/device_info_plus/device_info_plus.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/flutter_inappwebview_ios/flutter_inappwebview_ios.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/flutter_timezone/flutter_timezone.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/package_info_plus/package_info_plus.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/pedometer/pedometer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_foundation/shared_preferences_foundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/sqflite_darwin/sqflite_darwin.framework"
 fi
 if [[ "$CONFIGURATION" == "Profile" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/OrderedSet/OrderedSet.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/device_info_plus/device_info_plus.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/flutter_inappwebview_ios/flutter_inappwebview_ios.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/flutter_timezone/flutter_timezone.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/package_info_plus/package_info_plus.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/pedometer/pedometer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_foundation/shared_preferences_foundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/sqflite_darwin/sqflite_darwin.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/OrderedSet/OrderedSet.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/device_info_plus/device_info_plus.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/flutter_inappwebview_ios/flutter_inappwebview_ios.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/flutter_timezone/flutter_timezone.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/package_info_plus/package_info_plus.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/pedometer/pedometer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_foundation/shared_preferences_foundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/sqflite_darwin/sqflite_darwin.framework"
